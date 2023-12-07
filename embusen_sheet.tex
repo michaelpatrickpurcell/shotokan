@@ -1,0 +1,90 @@
+\documentclass[landscape, a4paper, parskip=half, DIV=13]{scrartcl}
+\usepackage[top=1.25cm, bottom=1.0cm, left=7cm, right=7cm, marginparwidth=6.0cm, marginparsep=0pt]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\setmainfont{Tex Gyre Schola}
+\setmathfont{Tex Gyre Schola Math Regular}
+%\setmainfont[Scale=0.95]{Century Gothic}
+\usepackage{contour}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\usepackage{marginnote}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{embusen}
+
+\setlist[description]{font=\normalfont}
+
+\renewcommand*{\descriptionlabel}[1]{\hspace{\labelsep}\descfont #1:}
+
+%\setkomafont{section}{\setmainfont{Tex Gyre Schola}\Large\textbf}
+\setkomafont{section}{\setmainfont[Scale=0.95]{Century Gothic}\LARGE\bfseries}
+\setkomafont{subsection}{\setmainfont[Scale=0.95]{Century Gothic}\Large\bfseries}
+
+% Adjust spacing before and after section headings
+\RedeclareSectionCommand[
+  runin=false,
+  beforeskip=1.0\baselineskip,
+  afterskip=0.0\baselineskip
+]{section}
+
+\RedeclareSectionCommand[
+  runin=false,
+  beforeskip=0.25\baselineskip,
+  afterskip=0.0\baselineskip
+]{subsection}
+
+\pagestyle{empty}
+\begin{document}
+{
+%\setmainfont[Scale=2.5]{Tex Gyre Schola}
+\setmainfont[Scale=2.5]{Century Gothic}
+\begin{center}
+\Huge\textbf{\phantom{y}Embusen\phantom{y}}
+\end{center}
+}
+\marginnote{\center\includegraphics[height=2.375cm]{Images/side_kick_pose.png}\qquad\qquad \includegraphics[height=2.5cm]{Images/gedan_burai_pose_left.png}}[-4.125cm]
+\reversemarginpar\marginnote{\center\includegraphics[height=2.5cm]{Images/oi_zuki_pose_right.png}\qquad\qquad \reflectbox{\includegraphics[height=2.5cm]{Images/pinan_sandan_throw_pose.png}}}[-4.0cm]
+
+\vspace{0.0cm}
+\vspace{-0.5cm}
+
+\begin{center}
+\scalebox{2.88}{
+%\input{shihozuki_ichi_kata.tex}
+\input{taikyoku_shodan_kata.tex}
+}
+\normalmarginpar\marginnote{\section*{Gameplay}
+%\input{shihozuki_ichi_steps.tex}
+\input{taikyoku_shodan_steps.tex}
+}[-15.5875cm]
+\reversemarginpar\marginnote{\raggedright\section*{Overview}
+Embusen is a drawing game for any number of players. Each player will need a copy of these rules and a pencil.
+
+During the game, you will perform a \emph{kata}. To do so, you\\will draw a diagram which represents the choreographed series of stances, strikes, and blocks that your kata comprises. 
+
+%Your goal is to recreate your kata~diagram, as described in\\the remainder of these rules, as accurately as possible.
+
+To represent the difficulty in accurately assessing your own performance, you must always \textbf{close your eyes whenever\\you are drawing}.%You may, however, watch other players perform their katas and offer guidance to assist them.
+
+%This is not a game that you can win; there is always room for improvement. Instead, you should focus on achieving mastery through practice and helping others to do the same.
+
+\begin{description}[leftmargin=*]
+\item[\textbf{Training}] You should work together to learn your katas\\and practice performing them. During training, you may watch other players perform and offer guidance to assist them.
+\item[\textbf{Competition}] You should take turns performing your katas without guidance from other players. Whoever best recreates their kata diagram in their performance wins the game.
+\end{description}
+}[-15.5875cm]
+
+\vfill
+
+{\hspace*{1ex} {\setmainfont{Noto Sans JP}\Large 強度手法} \hfill\LARGE \quad\ Designed by Michael Purcell \hfill {\setmainfont{Noto Sans JP}\Large \phantom{強}空手道} \hspace*{1.25ex}}
+\normalmarginpar\marginnote{\raggedright\textbf{Kata}: Taikyoku Shodan}
+%\normalmarginpar\marginnote{\raggedright\textbf{Kata}: Shihozuki Ichi}
+\reversemarginpar\marginnote{\raggedright\textbf{Contact}: ttkttkt@gmail.com}
+\end{center}
+\end{document}
