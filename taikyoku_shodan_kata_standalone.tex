@@ -1,0 +1,50 @@
+\documentclass{standalone}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+\usepackage{fontspec}
+\setmainfont[Scale=0.95]{Century Gothic-Bold}
+\usepackage{enumitem}
+
+\usepackage{embusen}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+\pic at (0,-0.66in) {kiten={lightgray}};
+\pic at (-0.33in, -0.66in) {gedan_burai={1/17\ \ \ \ }};
+\pic at (-0.66in, -0.66in) {chodan_oi_zuki={2/18\ \ \ \ }};
+\pic[xscale=-1] at (0in, -0.66in) {gedan_burai={\ \ \ \ 3/19}};
+\pic[xscale=-1] at (0.33in, -0.66in) {chodan_oi_zuki={\ \ \ 4/20}};
+\pic[rotate=-90] at (0in, -0.33in) {gedan_burai={5}};
+\pic[rotate=-90] at (0, 0) {chodan_oi_zuki={6}};
+\pic[rotate=-90, yscale=-1] at (0, 0.33in) {chodan_oi_zuki={7}};
+\pic[rotate=-90] at (0, 0.66in) {chodan_oi_zuki={8}};
+\pic[rotate=180] at (0.33in, 0.66in) {gedan_burai={9}};
+\pic[rotate=180] at (0.66in, 0.66in) {chodan_oi_zuki={10}};
+\pic[yscale=-1] at (0in, 0.66in) {gedan_burai={11}};
+\pic[yscale=-1] at (-0.33in, 0.66in) {chodan_oi_zuki={12}};
+\pic[rotate=90] at (0, 0.33in) {gedan_burai={13}};
+\pic[rotate=90] at (0, 0) {chodan_oi_zuki={14}};
+\pic[rotate=90, yscale=-1] at (0, -0.33in) {chodan_oi_zuki={15}};
+\pic[rotate=90] at (0, -0.66in) {chodan_oi_zuki={16}};
+
+%\draw[ultra thick, lightgray] (-0.66in, -0.66in) -- (0.33in, -0.66in);
+%\draw[ultra thick, lightgray] (0,-0.66in) -- (0, 0.66in);
+%\draw[ultra thick, lightgray] (-0.33in, 0.66in) -- (0.66in, 0.66in);
+
+\foreach \i in {-0.99, -0.66, ..., 1.0}
+	\foreach \j in {-0.99, -0.88, ..., 1.0} {
+		\node[inner sep=0.25pt,fill=gray, circle] at (\i in, \j in) {\phantom{}};
+		\node[inner sep=0.25pt,fill=gray, circle] at (\j in, \i in) {\phantom{}};		
+}
+
+\foreach \i in {-0.825, -0.495,...,0.826}
+	\foreach \j in {-0.825, -0.495,...,0.826}
+		\node[inner sep=0.25pt,fill=gray, circle] at (\i in, \j in) {\phantom{}};
+
+\node[draw,line width=0.25mm,minimum width=1.99in,minimum height=1.99in] at (0in,0in) {\phantom{}};
+\node at (0,1.175in) {\Large Taikyoku Shodan};
+\end{tikzpicture}
+\end{document}
